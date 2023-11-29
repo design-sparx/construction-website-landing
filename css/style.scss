@@ -79,10 +79,15 @@ html, body {
 
   a.card {
     border-right: 1px solid var(--bs-dark) !important;
+    transition: .4s;
 
     .card-body {
       padding-top: 2rem;
       padding-bottom: 2rem;
+    }
+
+    &:hover {
+      background-color: var(--bs-dark) !important;
     }
   }
 }
@@ -235,7 +240,7 @@ footer {
     color: white;
   }
 
-  .nav-link{
+  .nav-link {
     font-weight: normal;
   }
 }

@@ -1,0 +1,214 @@
+html, body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+.navbar {
+  background-color: transparent;
+  transition: 0.4s;
+}
+.navbar .navbar-brand {
+  color: white;
+}
+.navbar .nav-link {
+  color: white;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.hero-section .carousel {
+  /* Since positioning the image, we need to help out the caption */
+  /* Declare heights because of positioning of img element */
+}
+.hero-section .carousel .btn {
+  text-transform: capitalize;
+}
+.hero-section .carousel .carousel-caption {
+  bottom: 10rem;
+  z-index: 10;
+}
+.hero-section .carousel .carousel-item {
+  height: 90vh;
+}
+.hero-section .carousel .carousel-item .overlay {
+  height: 100%;
+  width: 100vw;
+  display: inline-block;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.75)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000", endColorstr="#00000000", GradientType=0);
+  /* IE6-9 */
+}
+.hero-section .carousel .carousel-item img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-section .carousel .carousel-indicators {
+  bottom: 4rem;
+}
+
+.categories-section {
+  background-image: url("img/hero-4.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.categories-section a.card {
+  border-right: 1px solid var(--bs-dark) !important;
+  transition: 0.4s;
+}
+.categories-section a.card .card-body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.categories-section a.card:hover {
+  background-color: var(--bs-dark) !important;
+}
+
+/* CUSTOMIZED IMAGE GRID
+----------------- */
+.about-us-section {
+  /* Create two equal columns that sits next to each other */
+}
+.about-us-section .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-us-section .column {
+  flex: 50%;
+  padding: 0;
+  height: 320px;
+}
+.about-us-section .column img {
+  width: 100%;
+  height: 100%;
+  margin-top: 8px;
+  vertical-align: middle;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.about-us-section .column:nth-of-type(2) {
+  margin-top: 3rem;
+  margin-left: -3rem;
+}
+
+.services-section {
+  /* Container holding the image and the text */
+}
+.services-section .image-card {
+  position: relative;
+  /* Bottom right text */
+}
+.services-section .image-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.services-section .image-card .text-block {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.services-section .image-card .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bs-primary-bg-subtle);
+  color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+.services-section .image-card .overlay .middle {
+  width: 95%;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.services-section .image-card .overlay .middle .text {
+  background-color: #04AA6D;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.services-section .image-card:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+.services-section .image-card:hover .overlay .middle {
+  opacity: 1;
+}
+
+.projects-section .image-card {
+  position: relative;
+}
+.projects-section .image-card img {
+  display: block;
+}
+.projects-section .image-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+.projects-section .image-card .overlay .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.projects-section .image-card:hover .overlay {
+  opacity: 1;
+}
+.projects-section .image-card .text {
+  color: white;
+}
+
+footer h5, footer p, footer label, footer .nav-link, footer .navbar-brand {
+  color: white;
+}
+footer .nav-link {
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
