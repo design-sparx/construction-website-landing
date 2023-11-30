@@ -15,6 +15,14 @@ html, body {
   .nav-link {
     color: white;
   }
+
+  .offcanvas {
+    .offcanvas-header {
+      .btn-close {
+        background-color: #fff;
+      }
+    }
+  }
 }
 
 .section {
@@ -243,4 +251,56 @@ footer {
   .nav-link {
     font-weight: normal;
   }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hero-section {
+    .carousel {
+      .carousel-caption {
+        bottom: 1rem;
+      }
+
+      .carousel-item {
+        height: 50vh;
+      }
+    }
+  }
+
+  .about-us-section {
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Create two equal columns that sits next to each other */
+    .column {
+      height: 200px;
+
+      &:nth-of-type(2) {
+        margin-top: 4rem;
+        margin-left: -4rem;
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
