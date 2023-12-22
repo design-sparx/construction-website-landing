@@ -260,3 +260,17 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+// required to get $orange variable
+@import "../vendor/bootstrap-5.3.2-dist/scss/functions";
+@import "../vendor/bootstrap-5.3.2-dist/scss/variables";
+
+$primary: #512f2f; // set the $primary variable
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary
+));
+
+// set changes
+@import "../vendor/bootstrap-5.3.2-dist/scss/bootstrap";

@@ -29,6 +29,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+
   <link rel="stylesheet" href="css/main.css">
   <!--  custom styles-->
   <link rel="stylesheet" href="css/style.css">
@@ -38,7 +39,10 @@
 <header>
   <nav class="navbar navbar-expand-md px-0 px-lg-4 fixed-top" id="top-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="fa-solid fa-trowel-bricks text-warning fs-4 me-2"></i>Saota</a>
+      <a class="navbar-brand" href="/">
+        <img src="./img/logo.png" alt="debco logo" height="24" width="24" class="object-fit-contain">
+        <span>Debco Ltd</span>
+      </a>
       <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,22 +56,16 @@
         <div class="offcanvas-body align-items-center">
           <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="projects.html">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
-          <ul class="navbar-nav align-items-start align-items-lg-center">
+          <ul class="navbar-nav align-items-start align-items-md-center">
             <li class="nav-item">
               <a href="#" class="nav-link"><i class="fa-solid fa-search"></i></a>
             </li>
@@ -151,52 +149,28 @@
     </div>
   </div>
   <div class="categories-section">
-    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-6 g-0">
+    <div class="row row-cols-1 row-cols-md-3 g-0">
       <div class="col">
         <a href="#" class="card h-100 rounded-0 text-bg-primary text-decoration-none">
           <div class="card-body d-flex align-items-center justify-content-center gap-3">
-            <i class="fa-solid fa-person-digging fs-3 d-none d-md-block"></i>
-            <p class="card-text mb-0 fs-5">Construction</p>
+            <i class="fa-solid fa-house-chimney-window fs-3 d-none d-md-block"></i>
+            <p class="card-text mb-0 fs-5">Residential Developments</p>
           </div>
         </a>
       </div>
       <div class="col">
         <a href="#" class="card h-100 rounded-0 text-bg-primary text-decoration-none">
           <div class="card-body d-flex align-items-center justify-content-center gap-3">
-            <i class="fa-solid fa-compass-drafting fs-3 d-none d-md-block"></i>
-            <p class="card-text mb-0 fs-5">Architecture</p>
+            <i class="fa-solid fa-shop fs-3 d-none d-md-block"></i>
+            <p class="card-text mb-0 fs-5">Commercial Developments</p>
           </div>
         </a>
       </div>
       <div class="col">
         <a href="#" class="card rounded-0 text-bg-primary text-decoration-none">
           <div class="card-body d-flex align-items-center justify-content-center gap-3">
-            <i class="fa-solid fa-ruler-combined fs-3 d-none d-md-block"></i>
-            <p class="card-text mb-0 fs-5">Interior Design</p>
-          </div>
-        </a>
-      </div>
-      <div class="col">
-        <a href="#" class="card rounded-0 text-bg-primary text-decoration-none">
-          <div class="card-body d-flex align-items-center justify-content-center gap-3">
-            <i class="fa-solid fa-people-roof fs-3 d-none d-md-block"></i>
-            <p class="card-text mb-0 fs-5">House Roofer</p>
-          </div>
-        </a>
-      </div>
-      <div class="col">
-        <a href="#" class="card rounded-0 text-bg-primary text-decoration-none">
-          <div class="card-body d-flex align-items-center justify-content-center gap-3">
-            <i class="fa-solid fa-helmet-safety fs-3 d-none d-md-block"></i>
-            <p class="card-text mb-0 fs-5">Civil Engineer</p>
-          </div>
-        </a>
-      </div>
-      <div class="col">
-        <a href="#" class="card rounded-0 text-bg-primary text-decoration-none">
-          <div class="card-body d-flex align-items-center justify-content-center gap-3">
-            <i class="fa-solid fa-paint-roller fs-3 d-none d-md-block"></i>
-            <p class="card-text mb-0 fs-5 text-center">Wall Painting</p>
+            <i class="fa-solid fa-school-flag fs-3 d-none d-md-block"></i>
+            <p class="card-text mb-0 fs-5">Institutional Developments</p>
           </div>
         </a>
       </div>
@@ -204,7 +178,7 @@
   </div>
   <div class="about-us-section section container">
     <div class="row">
-      <div class="image-grid col-12 col-md-6">
+      <div class="image-grid col-12 col-lg-6">
         <div class="column">
           <img src="img/user-1.jpg" alt="user 1" class="shadow-sm">
         </div>
@@ -212,18 +186,25 @@
           <img src="img/user-2.jpg" alt="user 2" class="shadow-lg">
         </div>
       </div>
-      <div class="col-12 col-md-6 mt-5 mt-md-0">
-        <div class="hstack gap-2 justify-content-center justify-content-md-start section-title mb-3">
+      <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+        <div class="hstack gap-2 justify-content-center justify-content-lg-start section-title mb-3">
           <span class="fa-solid fa-grip-lines text-primary"></span>
-          <p class="mb-0 text-uppercase fs-5">about us</p>
+          <p class="mb-0 text-uppercase h4">about us</p>
         </div>
-        <h2 class="mb-3 text-center text-md-start">Provide solution & pure construction</h2>
-        <p class="mb-0 text-center text-md-start">The Saota company is a full service construction company, general
-          contractor, design-builder and
-          construction manager with office locations throughout the United States. Founded in 1989, Weitz is the oldest
-          commercial
-          general.</p>
-        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+        <p class="text-center text-lg-start">
+          DEBCO LIMITED COMPANY was Registered in the year 2023 under Companies Act 2015 as a
+          Private Limited Company. DLC is a multi-disciplinary DESIGN AND BUILD CONSORTIUM hub
+          which comprises of various construction professionals of Architects, Project Managers, Quantity
+          Surveyors (QS), Mechanical Engineers, Electrical Engineers and Structural Engineers who at each in
+          their various capacities and departments add their expertise and experience to the overall
+          functioning and operations of the larger company.
+        </p>
+        <div class="text-center text-lg-start my-3 my-lg-0">
+          <a href="about.html" class="btn btn-primary">
+            Read more
+          </a>
+        </div>
+        <div class="d-flex gap-3 justify-content-center justify-content-lg-start my-3">
           <div class="">
             <h1 class="mb-1">30+</h1>
             <p>Happy Customers</p>
@@ -233,16 +214,20 @@
             <p>Projects Completed</p>
           </div>
         </div>
-        <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
-          <button class="btn btn-primary">
-            Learn More
-          </button>
-          <div class="vr"></div>
+        <div class="d-flex gap-3 align-items-center justify-content-center justify-content-lg-start">
           <div class="hstack gap-3">
             <img src="img/ceo.jpg" alt="ceo" height="48" width="48" class="rounded-circle object-fit-cover">
             <div class="vstack">
-              <span class="fw-bold fs-5">John Doe</span>
-              <span>CEO of Saota</span>
+              <span class="fw-bold text-capitalize">wilson kariuki kihenjo</span>
+              <span>Director</span>
+            </div>
+          </div>
+          <div class="vr"></div>
+          <div class="hstack gap-3">
+            <img src="img/user-1.jpg" alt="ceo" height="48" width="48" class="rounded-circle object-fit-cover">
+            <div class="vstack">
+              <span class="fw-bold text-capitalize">raphael kyalo musyimi</span>
+              <span>Director</span>
             </div>
           </div>
         </div>
@@ -253,26 +238,27 @@
     <div class="container">
       <div class="hstack gap-1 justify-content-center section-title mb-3">
         <span class="fa-solid fa-grip-lines text-primary"></span>
-        <p class="mb-0 text-uppercase fs-5">our services</p>
+        <p class="mb-0 text-uppercase h4">our services</p>
       </div>
       <h2 class="text-center mb-3">Best provided services</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="row row-cols-1 row-cols-lg-3 g-4">
         <div class="col">
           <div class="image-card card shadow border-0">
             <img src="img/construction.jpg" alt="construction" class="rounded-3">
             <div class="text-block text-bg-primary hstack gap-3 p-3">
-              <i class="fa-solid fa-person-digging fs-4"></i>
-              <h6 class="mb-0">Construction</h6>
+              <i class="fa-solid fa-house-chimney-window fs-4"></i>
+              <h6 class="mb-0">Residential</h6>
             </div>
             <div class="overlay rounded-3">
               <div class="middle vstack gap-3">
-                <i class="fa-solid fa-person-digging fs-3"></i>
-                <p class="mb-0 h6 fw-bold">Construction</p>
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="btn btn-link">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
+                <i class="fa-solid fa-house-chimney-window fs-3"></i>
+                <p class="mb-0 h6 fw-bold">Residential Developments</p>
+                <ul class="text-start">
+                  <li>Bungalows</li>
+                  <li>Maisonettes, Villas, Townhouses, Mansions</li>
+                  <li>Apartments</li>
+                </ul>
+                <button class="btn">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
               </div>
             </div>
           </div>
@@ -281,18 +267,20 @@
           <div class="image-card card shadow border-0">
             <img src="img/architecture.jpg" alt="construction" class="rounded-3">
             <div class="text-block text-bg-primary hstack gap-3 p-3">
-              <i class="fa-solid fa-compass-drafting fs-4"></i>
-              <h6 class="mb-0">Architected</h6>
+              <i class="fa-solid fa-shop fs-4"></i>
+              <h6 class="mb-0">Commercial</h6>
             </div>
             <div class="overlay rounded-3">
               <div class="middle vstack gap-3">
-                <i class="fa-solid fa-person-digging fs-3"></i>
-                <p class="mb-0 h6 fw-bold">Architected</p>
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="btn btn-link">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
+                <i class="fa-solid fa-shop fs-3"></i>
+                <p class="mb-0 h6 fw-bold">Commercial Developments</p>
+                <ul class="text-start">
+                  <li>Offices</li>
+                  <li>Mixed use Developments</li>
+                  <li>Restaurants and Hotels</li>
+                  <li>Warehouses</li>
+                </ul>
+                <button class="btn">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
               </div>
             </div>
           </div>
@@ -301,38 +289,18 @@
           <div class="image-card card shadow border-0">
             <img src="img/interior-design.jpg" alt="construction" class="rounded-3">
             <div class="text-block text-bg-primary hstack gap-3 p-3">
-              <i class="fa-solid fa-ruler-combined fs-4"></i>
-              <h6 class="mb-0">Interior design</h6>
+              <i class="fa-solid fa-school-flag fs-4"></i>
+              <h6 class="mb-0">Institutional</h6>
             </div>
             <div class="overlay rounded-3">
               <div class="middle vstack gap-3">
-                <i class="fa-solid fa-person-digging fs-4"></i>
-                <p class="mb-0 h6 fw-bold">Interior design</p>
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="btn btn-link">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-card card shadow border-0">
-            <img src="img/wall-painting.jpg" alt="construction" class="rounded-3">
-            <div class="text-block text-bg-primary hstack gap-3 p-3">
-              <i class="fa-solid fa-paint-roller fs-3"></i>
-              <h6 class="mb-0">Wall painting</h6>
-            </div>
-            <div class="overlay rounded-3">
-              <div class="middle vstack gap-3">
-                <i class="fa-solid fa-person-digging fs-3"></i>
-                <p class="mb-0 h6 fw-bold">Wall painting</p>
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="btn btn-link">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
+                <i class="fa-solid fa-school-flag fs-4"></i>
+                <p class="mb-0 h6 fw-bold">Institutional Developments</p>
+                <ul class="text-start">
+                  <li>Schools</li>
+                  <li>Hospitals</li>
+                </ul>
+                <button class="btn">Read more<i class="fa-solid fa-chevron-right ms-2"></i></button>
               </div>
             </div>
           </div>
@@ -342,10 +310,10 @@
   </div>
   <div class="faqs-section section">
     <div class="row container mx-auto">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <div class="hstack gap-1 section-title mb-3">
           <span class="fa-solid fa-grip-lines text-primary"></span>
-          <p class="mb-0 text-uppercase fs-5">faq</p>
+          <p class="mb-0 text-uppercase h4">faq</p>
         </div>
         <h2 class="mb-3">Contact commercial construction company</h2>
         <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -356,7 +324,7 @@
           anim id est laborum.</p>
         <button class="btn btn-primary">Learn More</button>
       </div>
-      <div class="col-12 col-md-6 mt-5 mt-md-0">
+      <div class="col-12 col-lg-6 mt-5 mt-lg-0">
         <div class="accordion accordion-flush" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -417,12 +385,11 @@
     <div class="container">
       <div class="hstack gap-1 justify-content-center section-title mb-3">
         <span class="fa-solid fa-grip-lines text-primary"></span>
-        <p class="mb-0 text-uppercase fs-5">our projects</p>
+        <p class="mb-0 text-uppercase h4">our projects</p>
       </div>
       <h2 class="text-center mb-3">Our latest projects</h2>
       <p class="text-center mb-3">Our customer's projects have the power to transform. They create opportunity, protect
-        people and the
-        environment.</p>
+        people and the environment.</p>
       <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
         <button type="button" class="btn btn-sm active" data-bs-toggle="button" aria-pressed="true">All works</button>
         <button type="button" class="btn btn-sm" data-bs-toggle="button">Constructions</button>
@@ -433,7 +400,7 @@
         <button type="button" class="btn btn-sm" data-bs-toggle="button">Wall painting</button>
       </div>
       <div class="row g-3">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-lg-4">
           <a href="#" class="image-card">
             <img src="img/construction-2.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
             <div class="overlay vstack justify-content-end rounded-3">
@@ -447,7 +414,7 @@
             </div>
           </a>
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-lg-8">
           <a href="#" class="image-card">
             <img src="img/construction-1.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
             <div class="overlay vstack justify-content-end rounded-3">
@@ -461,7 +428,7 @@
             </div>
           </a>
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-lg-8">
           <a href="#" class="image-card">
             <img src="img/construction-3.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
             <div class="overlay vstack justify-content-end rounded-3">
@@ -475,7 +442,7 @@
             </div>
           </a>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-lg-4">
           <a href="#" class="image-card">
             <img src="img/construction-4.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
             <div class="overlay vstack justify-content-end rounded-3">
@@ -490,13 +457,16 @@
           </a>
         </div>
       </div>
+      <div class="text-center mt-5 mt-lg-3">
+        <a href="projects.html" class="btn btn-primary">View more projects</a>
+      </div>
     </div>
   </div>
   <div class="testimonials-section section">
     <div class="container">
       <div class="hstack gap-1 justify-content-center section-title mb-3">
         <span class="fa-solid fa-grip-lines text-primary"></span>
-        <p class="mb-0 text-uppercase fs-5">testimonials</p>
+        <p class="mb-0 text-uppercase h4">testimonials</p>
       </div>
       <h2 class="text-center mb-3">Clients say about our company</h2>
       <div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -583,16 +553,20 @@
 <div class="bg-dark">
   <footer class="py-5 container">
     <div class="row">
-      <div class="col-12 col-md-4 mb-3">
+      <div class="col-12 col-lg-4 mb-3">
         <a class="navbar-brand fs-3" href="#">
-          <i class="fa-solid fa-trowel-bricks text-warning me-2"></i>
-          <span>Saota</span>
+          <img src=./img/logo.png alt="debco logo" height="36" width="36">
+          <span>Debco Ltd</span>
         </a>
-        <p class="small mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.</p>
+        <p class="small mt-3">
+          DLC is a multi-disciplinary DESIGN AND BUILD CONSORTIUM hub
+          which comprises of various construction professionals of Architects, Project Managers, Quantity
+          Surveyors (QS), Mechanical Engineers, Electrical Engineers and Structural Engineers who at each in
+          their various capacities and departments add their expertise and experience to the overall
+          functioning and operations of the larger company.
+        </p>
       </div>
-      <div class="col-12 col-md-2 mb-3">
+      <div class="col-12 col-lg-2 mb-3">
         <h5>Company</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
@@ -603,7 +577,7 @@
         </ul>
       </div>
 
-      <div class="col-12 col-md-2 mb-3">
+      <div class="col-12 col-lg-2 mb-3">
         <h5>Get in touch</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0">
@@ -621,7 +595,7 @@
         </ul>
       </div>
 
-      <div class="col-12 col-md-4 mb-3">
+      <div class="col-12 col-lg-4 mb-3">
         <form>
           <h5>Subscribe to our newsletter</h5>
           <p>Monthly digest of what's new and exciting from us.</p>

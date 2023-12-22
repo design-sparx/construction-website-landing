@@ -16,246 +16,358 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--  bootstrap-->
+  <link rel="stylesheet" href="vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <!--  font awesome-->
   <link rel="stylesheet" href="vendor/fontawesome-free-6.4.2-web/css/all.min.css">
+  <!--  noto sans font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!--  custom styles-->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <header>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand text-uppercase me-3" href="#">Saota</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-md px-0 px-lg-4 fixed-top bg-primary" id="top-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="./img/logo.png" alt="debco logo" height="24" width="24" class="object-fit-contain">
+        <span>Debco Ltd</span>
+      </a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav gap-2 mb-2 mb-md-0">
-          <li class="nav-item custom-dropdown">
-            <a class="nav-link dropbtn" aria-current="page" href="#">Projects</a>
-            <div class="dropdown-content">
-              <div class="d-flex gap-2 container">
-                <a class="nav-link" href="#">Residential</a>
-                <a class="nav-link" href="#">Hospital</a>
-                <a class="nav-link" href="#">Commercial</a>
-                <a class="nav-link" href="#">Public</a>
-                <a class="nav-link" href="#">Master Planning</a>
-                <a class="nav-link" href="#">Mixed Use</a>
-                <a class="nav-link" href="#">All Projects</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Media</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Careers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">LSL Book</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <div class="input-group input-group-sm w-25 ms-3 me-auto">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="fa-solid fa-search"></i>
-          </span>
-          <input type="text" class="form-control" placeholder="search" aria-label="search"
-                 aria-describedby="basic-addon1">
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+           aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="offcanvas-title" href="#"><i class="fa-solid fa-trowel-bricks text-warning fs-4 me-2"></i>Saota</a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="d-flex align-items-center" role="search">
-          <div class="nav-item dropdown">
-            <a class="btn btn-outline-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              English
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Chinese</a></li>
-            </ul>
-          </div>
+        <div class="offcanvas-body align-items-center">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav align-items-start align-items-md-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="fa-solid fa-search"></i></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link d-flex gap-3 align-items-center">
+                <i class="fa-solid fa-headphones fs-5"></i>
+                <span class="vstack">
+                  <small>Call Us</small>
+                  <small>000-000-0000</small>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </nav>
 </header>
 <main>
-  <div class="page-header container d-flex justify-content-between py-3">
-    <h4 class="text-white">Projects</h4>
-    <div class="row g-3 align-items-center text-white">
-      <div class="col-auto">
-        <label for="filter" class="col-form-label">Filters</label>
-      </div>
-      <div class="col-auto">
-        <select class="form-select form-select-sm" aria-label="Default select example" id="filter">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-dark">clear filters</button>
-      </div>
-    </div>
-  </div>
-  <div class="row row-cols-1 row-cols-md-2 g-0">
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
+  <div class="container mt-5">
+    <div class="projects-section section">
+      <div class="d-flex justify-content-between section-title mb-3">
+        <div class="hstack gap-1">
+          <span class="fa-solid fa-grip-lines text-primary"></span>
+          <p class="mb-0 text-uppercase h4">our projects</p>
+        </div>
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Relevant</option>
+            <option value="1">Latest</option>
+            <option value="2">Complete</option>
+          </select>
+          <label for="floatingSelect">Sort by</label>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-2.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM BUNGALOW</p>
+                <p class="text small mb-0 ms-3">Kenya, Kebarisia, Migori County</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-1.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM ATTIC FARM HOUSE</p>
+                <p class="text small mb-0 ms-3">Kenya, Naivasha</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-3.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">4 BEDROOM COTTAGES</p>
+                <p class="text small mb-0 ms-3">Kenya, Naivasha</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-4.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM APARTMENT- INTERIORS FACELIFT </p>
+                <p class="text small mb-0 ms-3">Kenya, Nairobi</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-2.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM BUNGALOW</p>
+                <p class="text small mb-0 ms-3">Kenya, Kebarisia, Migori County</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-1.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM ATTIC FARM HOUSE</p>
+                <p class="text small mb-0 ms-3">Kenya, Naivasha</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-3.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">4 BEDROOM COTTAGES</p>
+                <p class="text small mb-0 ms-3">Kenya, Naivasha</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-4.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM APARTMENT- INTERIORS FACELIFT </p>
+                <p class="text small mb-0 ms-3">Kenya, Nairobi</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-2.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM BUNGALOW</p>
+                <p class="text small mb-0 ms-3">Kenya, Kebarisia, Migori County</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-1.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM ATTIC FARM HOUSE</p>
+                <p class="text small mb-0 ms-3">Kenya, Naivasha</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-3.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">4 BEDROOM COTTAGES</p>
+                <p class="text small mb-0 ms-3">Kenya, Naivasha</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="projects-single.html" class="image-card">
+            <img src="img/construction-4.jpg" alt="construction image" height="320" class="w-100 rounded-3 shadow">
+            <div class="overlay vstack justify-content-end rounded-3">
+              <div class="border-start border-4 border-white">
+                <p class="text mb-0 ms-3">3 BEDROOM APARTMENT- INTERIORS FACELIFT </p>
+                <p class="text small mb-0 ms-3">Kenya, Nairobi</p>
+              </div>
+              <button class="btn btn-light btn-primary">
+                <i class="fa-solid fa-external-link"></i>
+              </button>
+            </div>
+          </a>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-bg-dark project-card rounded-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHwwfDB8fHwy"
-          class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title">Kings way</h5>
-          <p class="card-text">Lagos, Nigeria.</p>
-        </div>
-      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-5 mt-lg-3">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </main>
-<footer>
-  <nav class="navbar navbar-expand-sm navbar-dark bottom-nav">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottom"
-              aria-controls="navbarBottom" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarBottom">
-        <span class="navbar-text">
-              © 2023 SAOTA. All Rights Reserved. Privacy Policy
-        </span>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          </li>
-        </ul>
-        <div class="row g-1 align-items-center">
-          <div class="col-auto">
-            <label for="email" class="col-form-label navbar-text">Sign up for our newsletters:</label>
-          </div>
-          <div class="col-auto">
-            <input type="email" id="email" class="form-control form-control-sm" aria-describedby="email"
-                   placeholder="email">
-          </div>
-          <div class="col-auto">
-            <button class="btn btn-dark btn-sm">Subscribe</button>
-          </div>
-        </div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">okha</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">arrcc</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">tenebris lab</a>
-          </li>
+<div class="bg-dark">
+  <footer class="py-5 container">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-3">
+        <a class="navbar-brand fs-3" href="#">
+          <img src=./img/logo.png alt="debco logo" height="36" width="36">
+          <span>Debco Ltd</span>
+        </a>
+        <p class="small mt-3">
+          DLC is a multi-disciplinary DESIGN AND BUILD CONSORTIUM hub
+          which comprises of various construction professionals of Architects, Project Managers, Quantity
+          Surveyors (QS), Mechanical Engineers, Electrical Engineers and Structural Engineers who at each in
+          their various capacities and departments add their expertise and experience to the overall
+          functioning and operations of the larger company.
+        </p>
+      </div>
+      <div class="col-12 col-md-2 mb-3">
+        <h5>Company</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">About</a></li>
         </ul>
       </div>
+
+      <div class="col-12 col-md-2 mb-3">
+        <h5>Get in touch</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>31 New Street, NY USA</span>
+          </a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">
+            <i class="fa-solid fa-phone"></i>
+            <span>+123456789</span>
+          </a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@saota.com</span>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </nav>
-</footer>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top">
+      <p class="text-center text-md-start">&copy; 2023 Saota, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
+        <li class="ms-3">
+          <a href="" class="nav-link">
+            <span class="fa-brands fa-facebook-f"></span>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="" class="nav-link">
+            <span class="fa-brands fa-twitter"></span>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="" class="nav-link">
+            <span class="fa-brands fa-linkedin-in"></span>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="" class="nav-link">
+            <span class="fa-brands fa-instagram"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
